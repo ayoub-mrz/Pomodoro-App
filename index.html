@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/logo.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro App</title>
+</head>
+<body>
+
+    <header><h1>pomodoro</h1></header>
+
+    <ul class="selection">
+        <li class="active">Pomodoro</li>
+        <li>Short Break</li>
+        <li>Long Break</li>
+        <div class="color-li"></div>
+    </ul>
+
+    <div class="main-circule">
+        <div class="inside-circule">
+            <div class="text">
+                <p class="timeSpan">00:00</p>
+                <button class="pause">Pause</button>
+                <button class="play">Play</button>
+                <button class="resume">Resume</button>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#e91e63" />
+                        <stop offset="100%" stop-color="#673ab7" />
+                    </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+        </div>
+    </div>
+
+    <img class="settings" src="img/settings.svg" alt="settings">
+
+    <!-- Settings -->
+    <div class="settings-menu">
+        <div class="heading"><span>Settings</span><img src="img/close.svg" alt="close"></div>
+        <div class="time">
+            <h4>Time (Minutes)</h4>
+            <div class="input-bar">
+                <span>Pomodoro</span>
+                <input type="number" placeholder="25" min="5" max="120">
+            </div>
+            <div class="input-bar">
+                <span>Short Break</span>
+                <input type="number" placeholder="5" min="1" max="60">
+            </div>
+            <div class="input-bar">
+                <span>Long Break</span>
+                <input type="number" placeholder="30" min="1" max="60">
+            </div>
+            <div class="input-bar">
+                <span>Long Break Every</span>
+                <input type="number" placeholder="4" min="1" max="12">
+                <span>pomo</span>
+            </div>
+        </div>
+        <div class="font">
+            <h4>Font</h4>
+            <ul>
+                <li class="Roboto">Aa</li>
+                <li class="Charis">Aa</li>
+                <li class="Josefin">Aa</li>
+            </ul>
+        </div>
+        <div class="color">
+            <h4>Color</h4>
+            <ul>
+                <li class="red"><img class="red" src="img/checkmark.svg" alt="checkmark"></li>
+                <li class="blue"><img class="blue" src="img/checkmark.svg" alt="checkmark"></li>
+                <li class="magenta"><img class="magenta" src="img/checkmark.svg" alt="checkmark"></li>
+            </ul>
+        </div>
+        <div class="app-info">
+            <img src="img/alert-circle.svg" alt="alert-circle">
+            <p>You most Run <span></span> pomo to Reach Your Long Break</p>
+        </div>
+        <button class="apply">Apply</button>
+
+    </div>
+    <!-- Settings -->
+
+    <!-- sounds -->
+    <audio class="check1" src="check1.mp3"></audio>
+    <audio class="check2" src="check2.mp3"></audio>
+    <audio class="check3" src="check3.mp3"></audio>
+    <!-- sounds -->
+
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,249 @@
+header {
+    height: 15vh;
+    width: 100%;
+    @extend .center-f;
+    h1 {
+        font-size: 1.6rem;
+        color: $whiteText;
+    }
+}
+
+body {
+    > ul {
+        display: flex;
+        background-color: $veryDarkBlue;
+        border-radius: 35px;
+        position: relative;
+        li {
+            @extend .center-f;
+            position: relative;
+            width: 125px;
+            height: 45px;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 25px;
+            margin: 0.4rem;
+            color: $greyText;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: context-menu;
+            transition: .5s;
+            z-index: 2;
+            &.active {
+                color: $darkGray
+            }
+        }
+        .color-li {
+            width: 125px;
+            height: 45px;
+            border-radius: 25px;
+            margin: 0.4rem;
+            background-color: var(--mainColor);
+            position: absolute;
+            right: 275px;
+            border-radius: 30px;
+            z-index: 1;
+            transition: .5s;
+        }
+    }
+}
+
+.main-circule {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: $gradient1;
+    margin-top: 5rem;
+    box-shadow: -25px -25px 65px 30px #2f367091;
+    @extend .center-f;
+    .inside-circule {
+        width: 90%;
+        height: 90%;
+        background-color: $darkBlue;
+        border-radius: 50%;
+        @extend .center-f;
+        text-align: center;
+        position: relative;
+        .text p{
+            font-size: 4rem;
+            font-weight: 900;
+            color: $whiteText
+        }
+        svg {
+            position: absolute;
+            transform: rotate(-90deg) scale(1.75);
+            circle {
+                fill: none;
+                stroke: var(--mainColor); 
+                stroke-width: 5px;
+                stroke-dasharray: 440;
+                stroke-dashoffset: 0;
+                transition: 2s;
+            }
+        }
+    }
+}
+
+img.settings {
+    height: 40px;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    filter: invert(70%) sepia(1%) saturate(0%) hue-rotate(28deg) brightness(90%) contrast(82%);
+    cursor: pointer;
+    &:hover {
+        filter: unset;
+    }
+}
+
+.settings-menu {
+    width: 400px;
+    position: fixed;
+    top: 5%;
+    left: -50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    border-radius: 20px;
+    transition: .5s;
+    z-index: 9;
+    .heading {
+        height: 80px;
+        @extend .center-f;
+        justify-content: space-between;
+        padding: 0 1rem;
+        border-bottom: 1px solid #00000073;
+        > span {
+            font-size: 1.55rem;
+            font-weight: 600;
+        }
+        img {
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+    .time {
+        @extend .center-f;
+        flex-direction: column;
+        padding-block: 1rem;
+        border-bottom: 1px solid #7a7a7a6c;
+        margin-inline: 1.4rem;
+        .input-bar {
+            width: 85%;
+            display: flex;
+            margin-block: .6rem;
+            align-items: center;
+            span {
+                color: $greyText;
+                font-size: .9rem;
+            }
+            input {
+                width: 120px;
+                margin-left: auto;
+                background-color: $veryLightBlue;
+                border-radius: 5px;
+                padding: 0.55rem 0.8rem;
+                font-size: .9rem;
+                font-weight: 600;
+                & + span {
+                    margin-left: .4rem;
+                }
+            }
+        }
+        :last-child {
+            input {
+                width: 80px;
+            }
+        }
+    }
+    .font, .color {
+        @extend .time;
+        margin-inline: unset !important;
+        ul {
+            display: flex;
+            li {
+                height: 50px;
+                width: 50px;
+                @extend .center-f;
+                border-radius: 50%;
+                background-color: $veryLightBlue;
+                margin-inline: 1rem;
+                transition: .5s;
+                cursor: pointer;
+                &.active {
+                    background-color: $veryDarkBlue;
+                    color: $white;
+                }
+                &:hover {
+                    filter: brightness(.8);
+                }
+            }
+        }
+    }
+    
+    .font {
+        ul {
+            & :nth-child(1) {
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+            & :nth-child(2) {
+                font-family: 'Charis SIL', serif;
+            }
+            & :nth-child(3) {
+                font-family: 'Josefin Sans', sans-serif;
+            }
+            li {
+                font-weight: 600;
+            }
+        }
+    }
+    
+    .color {
+        width: 75%;
+        margin-inline: auto !important;
+        ul {
+            li {
+                @extend .center-f;
+                padding: 1.6rem;
+                position: relative;
+                img {
+                    height: 20px;
+                    display: none;
+                    position: absolute;
+                }
+            }
+            li:nth-child(1) {
+                background-color: $lightRed;
+            }
+            li:nth-child(2) {
+                background-color: $lightBlue;
+            }
+            li:nth-child(3) {
+                background-color: $magenta;
+            }
+        }
+    }
+    .app-info {
+        width: 75%;
+        padding: 1.2rem 0.6rem 4rem;
+        margin-inline: auto;
+        display: flex;
+        img {
+            height: 30px;
+        }
+        p {
+            font-size: .9em;
+            color: $darkText;
+            margin: 5px;
+            line-height: 25px;
+            span {
+                font-weight: 900;
+                color: var(--mainColor);
+                background: $darkBlue;
+                padding: 0.2rem 0.35rem 0.2rem 0.2rem;
+                border-radius: 2px;
+                font-family: sans-serif;
+            }
+        }
+    }
+}
+

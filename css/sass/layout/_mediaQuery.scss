@@ -1,0 +1,38 @@
+@media (min-width: 992px) {
+
+    .settings-menu {
+        width: 600px;
+    }
+
+    body {
+        > ul li {
+            width: 170px;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 1em;
+        }
+        > ul .color-li {
+            width: 170px;
+            height: 60px;
+            right: 365px;
+        }
+    }
+
+    .main-circule {
+        width: 400px;
+        height: 400px;
+        .inside-circule {
+            svg {
+                transform: rotate(-90deg) scale(2.4);
+            }
+            .text p {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    img.settings {
+        margin-top: 5rem;
+    }
+    
+}
